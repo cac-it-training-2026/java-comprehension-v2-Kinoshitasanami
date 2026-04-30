@@ -21,6 +21,12 @@ class NumberList {
 	 * @param limit（Listの最終要素）
 	 */
 	public void addFromOneTo(Integer limit) {
+
+		for (int i = 1; i <= limit; i++) {
+			numbers.add(i);
+
+		}
+
 		//TODO ここから実装する
 
 	}
@@ -32,8 +38,9 @@ class NumberList {
 	 */
 	public Integer calcSumOfList() {
 		Integer sum = 0;
-		//TODO ここから実装する
-
+		for (Integer num : numbers) {
+			sum += num;
+		}
 		return sum;
 	}
 
@@ -43,6 +50,9 @@ class NumberList {
 	 */
 	public void doubleListEachValue() {
 		//TODO ここから実装する
+		for (int i = 0; i < numbers.size(); i++) {
+			numbers.set(i, numbers.get(i) * 2);
+		}
 	}
 
 	/**
@@ -51,6 +61,10 @@ class NumberList {
 	 */
 	public void removeIndexOfFirstHalf() {
 		//TODO ここから実装する
+		int harf = numbers.size() / 2;
+		for (int i = 0; i < harf; i++) {
+			numbers.remove(0);
+		}
 
 	}
 
