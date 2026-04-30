@@ -1,18 +1,15 @@
-package q01_basic.question04;
+package q01_basic.question05;
 
-class Member {
+public class Member extends AbstMember {
 
 	private int id;
 	private String password;
-	private String name;
 	private int age;
 	private int rank;
 
-	// 引数なしコンストラクタ
 	public Member() {
 	}
 
-	// 引数ありコンストラクタ
 	public Member(int id, String password, String name, int age, int rank) {
 		this.id = id;
 		this.password = password;
@@ -37,14 +34,6 @@ class Member {
 		this.password = password;
 	}
 
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
 	public int getAge() {
 		return age;
 	}
@@ -61,6 +50,7 @@ class Member {
 		this.rank = rank;
 	}
 
+	@Override
 	public void showMember() {
 		System.out.println("***MEMBER DATA***");
 		System.out.println("id:" + id);
@@ -70,4 +60,10 @@ class Member {
 		System.out.println("rank:" + rank);
 		System.out.println("*****************");
 	}
+
+	@Override
+	public void buyItem() {
+		System.out.println(name + " purchased the item at 50% off");
+	}
+
 }
